@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oleksandr Miagotin — CV</title>
+<meta name="description" content="Senior full-stack software engineer and technical lead: laboratory automation, instrument software and web platforms in TypeScript, C++ and Rust.">
+<link rel="canonical" href="https://alex-miagotin.github.io/cv/">
+<link rel="alternate" hreflang="en" href="https://alex-miagotin.github.io/cv/">
+<link rel="alternate" hreflang="fr" href="https://alex-miagotin.github.io/fr/cv/">
+<link rel="alternate" hreflang="x-default" href="https://alex-miagotin.github.io/cv/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Oleksandr Miagotin — CV">
+<meta property="og:description" content="Senior full-stack software engineer and technical lead: laboratory automation, instrument software and web platforms in TypeScript, C++ and Rust.">
+<meta property="og:url" content="https://alex-miagotin.github.io/cv/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://alex-miagotin.github.io/og/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Oleksandr Miagotin, Senior Full-Stack Software Engineer">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/JetBrainsMono-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="stylesheet" href="/styles/print.css" media="print">
+</head>
+<body>
+<header class="site-header">
+<nav aria-label="Main">
+<a class="site-name" href="/"><img src="/favicon.svg" width="18" height="18" alt>Oleksandr Miagotin</a>
+<a href="/cv/">CV</a>
+<a class="lang-switch" href="/fr/cv/" hreflang="fr" lang="fr">Français</a>
+</nav>
+</header>
+<main>
+<article class="cv">
+<header class="cv-header">
+<h1>Oleksandr Miagotin</h1>
+<p class="role">Senior Full-Stack Software Engineer | Tech Lead</p>
+<p class="contact">Based in Paris, France · <a href="mailto:oleksandr.miagotin@gmail.com">oleksandr.miagotin@gmail.com</a> · <a href="https://www.linkedin.com/in/alex-miagotin/">LinkedIn</a> · <a href="https://github.com/alex-miagotin">GitHub</a></p>
+<button type="button" class="print-control" data-print hidden>Download PDF</button>
+</header>
+<section aria-labelledby="summary">
+<h2 id="summary">Summary</h2>
+<p>Software engineer since 2015, working on DNA Script's laboratory platform since 2021: React and NestJS web applications for scientists, C++ and Electron software that drives benchtop DNA synthesizers, and a Rust and Tauri controller for Hamilton liquid-handling robots. As technical lead, sets authentication and controller architecture, specifies operator identity and per-action authorization from 21 CFR Part 11 requirements, and reviews the team's pull requests.</p>
+<p>Looking for senior full-stack, backend or hands-on tech-lead roles in laboratory automation, regulated software or systems connected to hardware.</p>
+</section>
+<section aria-labelledby="experience">
+<h2 id="experience">Experience</h2>
+<article class="job">
+<h3>DNA Script</h3>
+<p class="meta"><time>Sep 2026</time> – <time>present</time> · Paris, France</p>
+<p class="note">Biotech company making benchtop DNA synthesizers · Direct contract, continuing the Svitla engagement below</p>
+<section class="role-block">
+<h4>Senior Full-Stack Software Engineer <span class="scope">· technical lead for authentication and the Hamilton controller</span></h4>
+<ul>
+<li><strong>Authentication</strong>: leading the platform&#39;s authentication (MFA, session lifecycle, Redis caching) and specifying its extension to the instruments: operator identity and per-action authorization, so every action on a synthesis run is attributable to a person, with acceptance criteria translated from 21 CFR Part 11.</li>
+<li><strong>Robot controller</strong>: leading the architecture of the Rust and Tauri controller for Hamilton liquid-handling robots, with separate domain, service and messaging layers and guards that reject commands in the wrong run state.</li>
+<li><strong>Lab automation</strong>: adding audit trails to assembly runs, investigating run aborts across the software-hardware boundary, and guarding assembly planning so instructions are generated only for supported plate formats and within real plate capacity.</li>
+<li><strong>Web platform</strong>: the React, Tailwind CSS and NestJS application scientists use to design genes, plan experiments and track orders, with typed tRPC APIs, Zod validation and PostgreSQL, tested with Vitest.</li>
+</ul>
+<p class="stack"><span class="label">Stack</span> TypeScript, React, Tailwind CSS, Zod, Node.js, NestJS, tRPC, PostgreSQL, Redis, Vitest, Rust, Tauri, MQTT, EMQX, Protocol Buffers</p>
+</section>
+</article>
+<article class="job">
+<h3>DNA Script <span class="via">via Svitla Systems, Inc. (contractor)</span></h3>
+<p class="meta"><time>Jan 2021</time> – <time>Sep 2026</time> · Remote</p>
+<section class="role-block">
+<h4>Tech Lead <span class="role-period"><time>May 2025</time> – <time>Sep 2026</time></span></h4>
+<p class="intro">Set the architecture for authentication and the Hamilton controller, wrote specifications with acceptance criteria that development and QA built and verified against, and reviewed the team&#39;s pull requests.</p>
+<ul>
+<li><strong>Authentication and access</strong>: built the platform&#39;s sign-in security (cookie sessions, brute-force protection, timing-safe password reset, a Redis session cache, multi-factor authentication enforceable per organization), role-based permissions and configurable biosecurity controls.</li>
+<li><strong>Robot controller</strong>: moved the Hamilton controller off its Python backend into a standalone Rust and Tauri desktop application with its own build-and-test and release pipelines.</li>
+<li><strong>Lab automation and gene design</strong>: generated the assembly files, plate layouts and pooling instructions the robots execute, defined Protocol Buffers messages for instrument status, and moved gene-design scoring onto an asynchronous Python, FastAPI and Celery pipeline with validation that blocks invalid designs before they reach the lab.</li>
+<li><strong>Hardware control in C++</strong>: thermal-camera integration and device control for a new instrument generation, including synchronized wash cycles that abort on failure.</li>
+</ul>
+<p class="stack"><span class="label">Stack</span> TypeScript, React, NestJS, tRPC, PostgreSQL, Redis, Celery, AWS S3, Vitest, Rust, Tauri, C++, MQTT, Protocol Buffers</p>
+</section>
+<section class="role-block">
+<h4>Software Engineer <span class="role-period"><time>Jun 2021</time> – <time>May 2025</time></span></h4>
+<p class="intro">Built the Electron and React operator software for the benchtop DNA synthesizers, with Next.js, TypeScript and Tailwind CSS, and contributed to the C++ control layer beneath it.</p>
+<ul>
+<li><strong>Run control</strong>: loading synthesis jobs, run progress and abort, safe pause and recovery, guided reagent changes with barcode scanning, and 384-well plate support.</li>
+<li><strong>Qt to Electron migration</strong>: maintained and extended the Qt/QML operator interface while building its replacement, until it was retired.</li>
+<li><strong>Safety interlocks and service tools</strong>: cleaning that must finish before a job can load, vacuum checks before synthesis, an abort-movement framework for motion hardware, and calibration tools for the robotic subsystems.</li>
+<li><strong>Instrument control and messaging</strong>: worked on the C++ process layer and device handlers for pumps, valves and sensors over serial ports, tested with Google Test, and the Protocol Buffers and MQTT link between interface and controller.</li>
+</ul>
+</section>
+<section class="role-block">
+<h4>Frontend Engineer <span class="role-period"><time>Jan 2021</time> – <time>Jun 2021</time></span></h4>
+<p class="intro">React and TypeScript interfaces for DNA Script&#39;s original web application (user administration with role-based permissions, sequence editor, plates, run reports) against its GraphQL API with Apollo, with shared components documented in Storybook.</p>
+</section>
+</article>
+<article class="job">
+<h3>Svitla Systems, Inc.</h3>
+<p class="meta"><time>Mar 2020</time> – <time>Dec 2020</time> · Remote</p>
+<section class="role-block">
+<h4>Frontend Engineer</h4>
+<p class="intro">React and TypeScript front ends for client projects: Sphera (with MySQL work and fixes to legacy Visual Basic code) and Alpha FX (RxJS and Material UI against a C# backend, delivered through Jenkins CI).</p>
+</section>
+</article>
+<p class="earlier"><strong>Earlier roles</strong>: Web Developer, Tumli (<time>Jul 2018</time> – <time>Dec 2019</time>) · Web Developer, WpWay (<time>May 2017</time> – <time>Jun 2018</time>) · Web Developer (part-time), CloudBuckit, Denmark (<time>2016</time> – <time>Jul 2018</time>) · Frontend Web Developer, Itembridge (<time>Jan 2015</time> – <time>Mar 2017</time>)</p>
+</section>
+<section aria-labelledby="skills">
+<h2 id="skills">Skills</h2>
+<dl class="skills">
+<dt>Languages</dt>
+<dd>TypeScript, JavaScript, C++, Rust, Python, SQL</dd>
+<dt>Web front end</dt>
+<dd>React, Next.js, Tailwind CSS, Zod, GraphQL</dd>
+<dt>Back end and data</dt>
+<dd>Node.js, NestJS, tRPC, FastAPI, PostgreSQL, Redis, Celery, AWS S3</dd>
+<dt>Desktop and instruments</dt>
+<dd>Electron, Tauri, Qt/QML, MQTT (EMQX), Protocol Buffers, serial-port device control</dd>
+<dt>Testing and delivery</dt>
+<dd>Vitest, Google Test, CI build, test and release pipelines</dd>
+<dt>Engineering practice</dt>
+<dd>SOLID, KISS and DRY design principles, technical specifications and acceptance criteria, code review, 21 CFR Part 11 requirements for authentication, access control and audit trails</dd>
+</dl>
+</section>
+<section aria-labelledby="education">
+<h2 id="education">Education</h2>
+<p><strong>Diploma of Engineer, Computer Science</strong>, Lutsk National Technical University · <time>2012</time> – <time>2015</time></p>
+<p><strong>Computer Science studies</strong>, Wyższa Szkoła Informatyki i Zarządzania w Rzeszowie · <time>2010</time> – <time>2011</time></p>
+</section>
+<section aria-labelledby="languages">
+<h2 id="languages">Languages</h2>
+<ul class="languages">
+<li>English: professional working</li>
+<li>French: basic (A0)</li>
+<li>Ukrainian: native</li>
+<li>Russian: full professional</li>
+<li>Polish: limited working</li>
+</ul>
+</section>
+</article>
+<script>document.querySelectorAll("[data-print]").forEach(b=>{b.hidden=false;b.onclick=()=>print()})</script>
+</main>
+</body>
+</html>
